@@ -1,0 +1,32 @@
+# ===== 运行环境 =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+
+# ===== 配置与密钥 =====
+.env
+*.local
+
+# ===== 运行时数据 =====
+instance/
+data/
+logs/
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== 研究/抓取产物（含旧系统真实数据，禁止提交）=====
+research/
+
+# ===== 编辑器 =====
+.idea/
+.vscode/
+.DS_Store
