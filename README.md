@@ -32,25 +32,29 @@
 
 ## 快速开始
 
+依赖由 `uv` 管理（`pyproject.toml` + `uv.lock`，Python 版本见 `.python-version`），全平台命令一致：
+
 ```bash
-# 1. 创建虚拟环境（可选）
-python -m venv .venv && .venv\Scripts\activate   # Windows
-# source .venv/bin/activate                       # Linux/macOS
+# 1. 创建/同步虚拟环境（.venv）
+uv sync
 
-# 2. 安装依赖
-pip install -r requirements.txt
-
-# 3. 配置环境变量
+# 2. 配置环境变量
 copy .env.example .env      # Windows
 # cp .env.example .env      # Linux/macOS
 
-# 4. 初始化数据（角色、管理员 admin/admin123、演示用户 demo/demo123）
-flask --app run.py seed
+# 3. 初始化数据（角色、管理员 admin/admin123、演示用户 demo/demo123）
+uv run flask --app run.py seed
 
-# 5. 启动
-python run.py
+# 4. 启动
+uv run python run.py
 # 访问 http://127.0.0.1:5000/api/health
+
+# 其他常用命令
+uv run python -m scripts.smoke_test   # 端到端冒烟测试
+uv add <pkg> / uv remove <pkg>        # 增删依赖
 ```
+
+> 也可直接激活 `.venv` 后使用 `python` / `flask`。
 
 ### 使用 MySQL
 

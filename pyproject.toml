@@ -1,0 +1,23 @@
+[project]
+name = "hz-nusec-lab-system"
+version = "0.1.0"
+description = "实验室智能管理系统（Flask 重构版），兼容原 Java 版接口"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "Flask==3.1.3",
+    "Flask-SQLAlchemy==3.1.1",
+    "Flask-Cors==6.0.5",
+    "SQLAlchemy==2.0.41",
+    "PyJWT==2.10.1",
+    "python-dotenv==1.2.2",
+    "PyMySQL==1.2.1",
+    "openpyxl==3.1.5",
+    "qrcode==8.2",
+    "Pillow==11.2.1",
+    "requests==2.31.0",
+]
+
+# 本项目是应用而非库，不参与打包
+[tool.uv]
+package = false
